@@ -1,0 +1,21 @@
+{
+    "name": "grt/pt",
+    "description": "This is a PHP client library for PT",
+    "type": "library",
+    "require": {
+        "guzzlehttp/psr7": "^2.7",
+        "guzzlehttp/guzzle": "^7.9"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "grt\\pt\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gerebenics Andor",
+            "email": "gerebenics.andor@umbrella.tv"
+        }
+    ]
+}

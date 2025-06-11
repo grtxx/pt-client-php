@@ -14,7 +14,12 @@
         print( "Error creating task\n" );
         exit( 1 );
     }
+    try {
     $task->addFile( 'media', __DIR__."/examplefiles/video.mp4" );
+    }
+    catch ( \Exception $e ) {
+        print( "Error adding file: ".$e->getMessage()."\n" );
+    }
     $task->enqueue();
     while ( $task->getStatus() != "ok" && $task->getStatus() != "error" ) {
         print( "Task is still running, waiting...\n" );
