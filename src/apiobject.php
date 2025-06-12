@@ -31,6 +31,14 @@ namespace grt\pt {
             return $this->data;
         }
 
+
+        public function getId() {
+            if ( isset( $this->data['id'] ) ) {
+                return $this->data['id'];
+            }
+            return null;
+        }
+
         
         public function setData( $data ) {
             $this->data = $data;
