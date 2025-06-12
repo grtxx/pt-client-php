@@ -6,14 +6,14 @@ namespace grt\pt\service\aimgr {
 
         protected $data;
 
-        function addFile( $role, $filename ) {
+        function addFile( $role, $localfilename, $aifilename="" ) {
             $data = [
                 [
                     'name' => $role,
-                    'contents' => \guzzlehttp\Psr7\Utils::tryFopen( $filename, "r" ),
-                    'filename' => basename( $filename ),
+                    'contents' => \guzzlehttp\Psr7\Utils::tryFopen( localfilename, "r" ),
+                    'filename' => basename( ( $aifilename != "" ? $aifilename : localfilename ) ),
                     'headers' => [
-                        'Content-type' => mime_content_type( $filename )
+                        'Content-type' => mime_content_type( $localfilename )
                     ]
                 ]
             ];
