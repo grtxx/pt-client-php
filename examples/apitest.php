@@ -29,6 +29,7 @@
     // add a file to the task - this is the content that will be reviewed by the AI
     try {
         $task->addFile( 'media', $file );
+    }
     catch ( \Exception $e ) {
         print( "Error adding file: ".$e->getMessage()."\n" );
     }

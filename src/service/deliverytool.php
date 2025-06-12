@@ -4,7 +4,7 @@ namespace grt\pt\service;
 
     use GuzzleHttp\Psr7;
 
-    class deliveryClient extends \grt\ptclient\ptclient {
+    class deliverytool extends \grt\pt\service\base {
 
         public function createCampaign( $campaign ) {
             $res = $this->ptapi->signedRequest( [
