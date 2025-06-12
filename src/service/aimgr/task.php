@@ -6,14 +6,14 @@ namespace grt\pt\service\aimgr {
 
         protected $data;
 
-        function addFile( $role, $localfilename, $aifilename="" ) {
+        function addFile( $role, $filename, $virtname = "" ) {
             $data = [
                 [
                     'name' => $role,
-                    'contents' => \guzzlehttp\Psr7\Utils::tryFopen( localfilename, "r" ),
-                    'filename' => basename( ( $aifilename != "" ? $aifilename : localfilename ) ),
+                    'contents' => \guzzlehttp\Psr7\Utils::tryFopen( $filename, "r" ),
+                    'filename' => ( $virtname != "" ? $virtname : basename( $filename ) ),
                     'headers' => [
-                        'Content-type' => mime_content_type( $localfilename )
+                        'Content-type' => mime_content_type( $filename )
                     ]
                 ]
             ];
@@ -30,9 +30,8 @@ namespace grt\pt\service\aimgr {
             else {
                 return false;
             }
-
         }
-
+        
 
         function enqueue() {
             $res = $this->ptapi->signedRequest( [
