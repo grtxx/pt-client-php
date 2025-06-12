@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 
-    include( __DIR__."/vendor/autoload.php" );
+    include( __DIR__."/../vendor/autoload.php" );
 
     $server = "localhost:8000";
     $appsecret = "<your_app_secret>";
