@@ -10,6 +10,10 @@
     $mgr = new \grt\pt\service\aimgr( $pt );
 
     $task = $mgr->createTask( "ContentReviewTask", "aicontentreview", [] );
+    print( "TASK_ID:".$task->guid()."\n" );
+    print_r( $task->getData() );
+    exit();
+
     if ( $task === false ) {
         print( "Error creating task\n" );
         exit( 1 );
