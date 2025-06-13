@@ -2,6 +2,7 @@
     "name": "grt/pt",
     "description": "This is a PHP client library for PT",
     "type": "library",
+    "version": "v0.5.0",
     "require": {
         "guzzlehttp/psr7": "^2.7",
         "guzzlehttp/guzzle": "^7.9"
