@@ -31,7 +31,7 @@ namespace grt\pt\service\aimgr {
                 return false;
             }
         }
-        
+
 
         function enqueue() {
             $res = $this->ptapi->signedRequest( [
